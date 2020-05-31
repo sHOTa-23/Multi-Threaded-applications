@@ -1,3 +1,5 @@
+import java.util.concurrent.locks.Lock;
+
 // Transaction.java
 /*
  (provided code)
@@ -5,17 +7,25 @@
  one transaction. Supports toString.
 */
 public class Transaction {
-	public int from;
-	public int to;
-	public int amount;
-	
-   	public Transaction(int from, int to, int amount) {
-		this.from = from;
-		this.to = to;
-		this.amount = amount;
-	}
+    private int from;
+    private int to;
+    private int amount;
+//added getter methods
+    public int getFrom() {
+        return from;
+    }
 
-	public String toString() {
-		return("from:" + from + " to:" + to + " amt:" + amount);
-	}
+    public int getTo() {
+        return to;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public Transaction(int from, int to, int amount) {
+        this.from = from;
+        this.to = to;
+        this.amount = amount;
+    }
 }
